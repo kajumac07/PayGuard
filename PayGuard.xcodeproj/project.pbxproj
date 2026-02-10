@@ -6,13 +6,35 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		24317B582F0FDD49004A118C /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24317B572F0FDD49004A118C /* EventKit.framework */; };
+		24317B5A2F0FDD56004A118C /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24317B592F0FDD56004A118C /* EventKitUI.framework */; };
+		24317B5F2F0FE5AB004A118C /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 24317B5E2F0FE5AB004A118C /* GoogleSignIn */; };
+		24317B612F0FE5AB004A118C /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 24317B602F0FE5AB004A118C /* GoogleSignInSwift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		24317B572F0FDD49004A118C /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		24317B592F0FDD56004A118C /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
 		24ADBA242F0F85D200F3DCE6 /* PayGuard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PayGuard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		244F02432F0FE7AE00BB53E4 /* Exceptions for "PayGuard" folder in "PayGuard" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 24ADBA232F0F85D200F3DCE6 /* PayGuard */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		24ADBA262F0F85D200F3DCE6 /* PayGuard */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				244F02432F0FE7AE00BB53E4 /* Exceptions for "PayGuard" folder in "PayGuard" target */,
+			);
 			path = PayGuard;
 			sourceTree = "<group>";
 		};
@@ -23,16 +45,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24317B5A2F0FDD56004A118C /* EventKitUI.framework in Frameworks */,
+				24317B582F0FDD49004A118C /* EventKit.framework in Frameworks */,
+				24317B5F2F0FE5AB004A118C /* GoogleSignIn in Frameworks */,
+				24317B612F0FE5AB004A118C /* GoogleSignInSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24317B562F0FDD48004A118C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				24317B592F0FDD56004A118C /* EventKitUI.framework */,
+				24317B572F0FDD49004A118C /* EventKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		24ADBA1B2F0F85D200F3DCE6 = {
 			isa = PBXGroup;
 			children = (
 				24ADBA262F0F85D200F3DCE6 /* PayGuard */,
+				24317B562F0FDD48004A118C /* Frameworks */,
 				24ADBA252F0F85D200F3DCE6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,6 +101,8 @@
 			);
 			name = PayGuard;
 			packageProductDependencies = (
+				24317B5E2F0FE5AB004A118C /* GoogleSignIn */,
+				24317B602F0FE5AB004A118C /* GoogleSignInSwift */,
 			);
 			productName = PayGuard;
 			productReference = 24ADBA242F0F85D200F3DCE6 /* PayGuard.app */;
@@ -94,6 +132,9 @@
 			);
 			mainGroup = 24ADBA1B2F0F85D200F3DCE6;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				24317B5D2F0FE5AB004A118C /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 24ADBA252F0F85D200F3DCE6 /* Products */;
 			projectDirPath = "";
@@ -256,6 +297,8 @@
 				DEVELOPMENT_TEAM = FSVFJHPHXJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PayGuard/Info.plist;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "PayGuard needs calendar access to add subscription renewal dates with reminders so you never miss a payment.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -288,6 +331,8 @@
 				DEVELOPMENT_TEAM = FSVFJHPHXJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PayGuard/Info.plist;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "PayGuard needs calendar access to add subscription renewal dates with reminders so you never miss a payment.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -332,6 +377,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		24317B5D2F0FE5AB004A118C /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		24317B5E2F0FE5AB004A118C /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 24317B5D2F0FE5AB004A118C /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		24317B602F0FE5AB004A118C /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 24317B5D2F0FE5AB004A118C /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 24ADBA1C2F0F85D200F3DCE6 /* Project object */;
 }
